@@ -96,7 +96,7 @@ QNetworkRequest RestApiConnector::getRequest(const QString &endpoint)
     request.setRawHeader("Accept", "application/vnd.github.v3+json");
     request.setRawHeader("Content-Type", "application/json");
     request.setRawHeader("Accept-Encoding", "gzip");
-    request.setRawHeader("Authorization", "token " + m_token.toUtf8());
+    request.setRawHeader("Authorization", "Bearer " + m_token.toUtf8());
 
     return request;
 }

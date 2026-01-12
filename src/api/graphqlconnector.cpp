@@ -35,7 +35,7 @@ void GraphQLConnector::sendQuery(const GraphQLQuery &query, quint8 requestType, 
     request.setSslConfiguration(QSslConfiguration::defaultConfiguration());
     request.setRawHeader("Content-Type", "application/json");
     request.setRawHeader("Accept-Encoding", "gzip");
-    request.setRawHeader("Authorization", "token " + m_token.toUtf8());
+    request.setRawHeader("Authorization", "Bearer " + m_token.toUtf8());
     request.setRawHeader("GraphQL-Features", "discussions_api");
 
     // send request
